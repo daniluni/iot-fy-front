@@ -1,0 +1,23 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/usuarios/edit/{{usuarios.id}}" method="POST">
+                <div class="form-group">
+                    <input type="nombre" name="nombre" class="form-control" placeholder="Nombre y apellidos" value="{{usuarios.nombre}}">
+                </div> 
+                <div class="form-group">
+                    <input type="usuario" name="usuario" class="form-control" placeholder="cuenta" value="{{usuarios.usuario}}">
+                </div>                             
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Nuevo email" value="{{usuarios.email}}">
+                </div>      
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

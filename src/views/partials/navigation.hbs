@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-link"></i> Dispositivos IoT
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          Dispositivos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/dispositivos">Todos los IoT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/dispositivos/add">Agrega un IoT</a>
+          </div>
+        </li>
+ 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          Informes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/dispositivos/listallcons">Consumos por dispositivo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/dispositivos/listaconsfecha">Consumos por fecha</a>
+            <div class="dropdown-divider"></div>     
+           <a class="dropdown-item" href="/dispositivos/listallalarma">Consumo fuera de horario</a>
+            <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="/dispositivos/listalarma">Alarmas Cursadas</a>
+            <div class="dropdown-divider"></div>            
+            <a class="dropdown-item" href="/dispositivos/listall">Gráfica consumos dispositivos</a> 
+            <div class="dropdown-divider"></div>            
+            <a class="dropdown-item" href="/dispositivos/listaconsfechag">Gráfica consumos x fecha</a>     
+           <div class="dropdown-divider"></div>            
+           <a class="dropdown-item" href="/dispositivos/listalarmag">Gráfica Alarmas por dispositivo</a>     
+ 
+          </div>
+        </li>
+         
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">SignIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">SignUp</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

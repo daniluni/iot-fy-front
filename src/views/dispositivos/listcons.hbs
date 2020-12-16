@@ -1,0 +1,39 @@
+<div class="container p-4">
+    <div class="row">
+            <div class="div1" >
+            <table class="table">
+            <thead>
+                <tr>
+                <th scope="row"></th>                    
+                <th scope="col">Descripción</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">desde</th>
+                <th scope="col">Hasta</th>
+                <th scope="col">Watts/hora</th>            
+                </tr>
+            </thead>
+            <tbody>
+        {{#each consumos}}
+                <tr>
+                <th scope="row"></th>
+                <td>{{descripcion}}</td>
+                <td>{{ubicacion}}</td>
+                <td>{{desde}}</td>
+                <td>{{hasta}}</td> 
+                <td >{{Wh}} w/h </td>                                          
+                </tr>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Sin consumos aun</p>
+                <a href="/profile">Volver</a>
+            </div>
+        </div>
+        {{/each}}
+        </tbody>
+        </table>
+<br>
+    <h4>Total consumos ya concretados (watts/hora): <b></b>{{#each total}} {{Wh}} {{/each}}</b></h4>
+        </div>
+    </div>
+</div>

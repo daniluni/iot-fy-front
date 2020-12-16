@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each dispositivos}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{descripcion}}<br>{{ubicacion}}
+                    </h3>
+                    <p class="m-2">Código:{{id}}</p>
+                    <p class="m-2">Watt:{{watios}}</p>
+                    <p class="m-2">Autorizado desde:{{autorizadodesde}}</p>
+                    <p class="m-2">Autorizado hasta:{{autorizadohasta}}</p>    
+                    <p class=".m-2">
+                        {{#if alarmas}}
+                            <p class="blink_text">Alarma activada</p>
+                        {{/if}}
+                    </p>                              
+                    <a class="btn btn-danger" href="/dispositivos/delete/{{id}}">
+                        Eliminar dispositivo
+                    </a>
+                    <a class="btn btn-secondary" href="/dispositivos/edit/{{id}}">
+                        Modificar dispositivo
+                    </a>
+                     <a class="btn btn-success" href="/dispositivos/listcons/{{id}}">
+                        Ver consumos
+                    </a>                   
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Sin dispositivos, Por favor agregar</p>
+                <a href="/dispositivos/add">Create One!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

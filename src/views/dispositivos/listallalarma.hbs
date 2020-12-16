@@ -1,0 +1,32 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+             <thead>
+                <tr>
+                <th scope="row"></th>                    
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ubicacion</th>     
+                <th scope="col">Inicio Alarma</th>                            
+                <th scope="col">Watts/hora Sobreconsumo</th>            
+                </tr>
+            </thead>
+            <tbody>
+        {{#each consumos}}
+                <tr>
+                <th scope="row"></th>
+                <td>{{descripcion}}</td>
+                <td>{{ubicacion}}</td>      
+                <td>{{inicio_alarma}}</td>                          
+                <td >{{Wh}} w/h </td>                                          
+                </tr>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Sin alarmas aun</p>
+            </div>
+        </div>
+        {{/each}}
+        </tbody>
+        </table>
+<br>
+    <h4>Total consumos NO autorizados (watts/hora): <b></b>{{#each total}} {{Wh}} {{/each}}</b></h4>        
+</div>

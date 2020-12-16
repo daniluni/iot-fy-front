@@ -1,0 +1,19 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>Hola {{user.nombre}}</h3>
+                    <h4>({{user.usuario}})</h4>
+                    <a href="/dispositivos" class="btn btn-primary m-4">
+                        Gestiona tus dispositivos IoT  
+                    </a>
+                    <a class="btn btn-success" href="/usuarios/edit/{{user.id}}">
+                        Modifica tus datos
+                    </a>                       
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

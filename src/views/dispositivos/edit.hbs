@@ -1,0 +1,29 @@
+<div class="col-md-4 mx-auto">
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/dispositivos/edit/{{dispositivos.id}}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="ubicacion" class="form-control" placeholder="ubicación" value="{{dispositivos.ubicacion}}" autofocus>
+                </div>
+                 <div class="form-group">
+                    <input type="text" name="descripcion" class="form-control" placeholder="descripción" value="{{dispositivos.descripcion}}" autofocus>
+                </div>               
+                <div class="form-group">
+                    <input type="time" name="autorizadodesde" class="form-control" placeholder="Autorizado desde" value="{{dispositivos.autorizadodesde}}">
+                </div>
+                <div class="form-group">
+                    <input type="time" name="autorizadohasta" class="form-control" placeholder="Autorizado hasta" value="{{dispositivos.autorizadohasta}}">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="watios" class="form-control" placeholder="Numero de Watts" value="{{dispositivos.watios}}">
+                </div>                
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card">
+                <div class="card-body">
+                    <form action="/dispositivos/add" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="ubicacion" class="form-control" placeholder="Ubicación" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="descripcion" class="form-control" placeholder="Disposivo Lumínico" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" name="autorizadodesde" min="00:00" max="23:59" class="form-control" placeholder="Hora de encendido">
+                        </div>
+                        <div class="form-group">
+                            <input type="time" name="autorizadohasta" min="00:00" max="23:59" class="form-control" placeholder="Hora de apagado">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="watios" class="form-control" placeholder="Watios" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

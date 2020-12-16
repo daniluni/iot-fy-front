@@ -1,0 +1,31 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+            <thead>
+                <tr>
+                <th scope="row"></th>                    
+                <th scope="col">Descripción</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Watts/hora</th>            
+                </tr>
+            </thead>
+            <tbody>
+        {{#each consumos}}
+                <tr>
+                <th scope="row"></th>
+                <td>{{descripcion}}</td>
+                <td>{{ubicacion}}</td>
+                <td >{{Wh}} w/h </td>                                          
+                </tr>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Sin consumos aun</p>
+                <a href="/dispositivos/list">Volver</a>
+            </div>
+        </div>
+        {{/each}}
+        </tbody>
+    </table>
+<br>
+    <h4>Total consumos ya concretados(watts/hora): <b></b>{{#each total}} {{Wh}} {{/each}}</b></h4>
+</div>

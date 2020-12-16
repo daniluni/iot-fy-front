@@ -1,0 +1,29 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each tarifas}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{nombre}}
+                    </h3>
+                    <p class="m-2">{{tarifa}}</p>
+                    <p class="text-muted"> Desde:
+                        {{timeago created_at}}
+                    </p>
+                    <a class="btn btn-secondary" href="/tarifas/edit/{{id}}">
+                        Modificar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not Links saved yet.</p>
+                <a href="/links/add">Create One!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+             <thead>
+                <tr>
+                <th scope="row"></th>                    
+                <th scope="col">Descripcion</th>
+                <th scope="col">Ubicacion</th>     
+                <th scope="col">Número de Alarmas</th>                                   
+                </tr>
+            </thead>
+            <tbody>
+        {{#each consumos}}
+                <tr>
+                <th scope="row"></th>
+                <td>{{descripcion}}</td>
+                <td>{{ubicacion}}</td>      
+                <td>{{nro_alarmas}} alarmas</td>                                                               
+                </tr>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Sin alarmas aun</p>
+            </div>
+        </div>
+        {{/each}}
+        </tbody>
+        </table>
+<br>
+    <h4>Total alarmas ya concretadas: <b></b>{{#each total}} {{total_alarmas}} {{/each}}</b></h4>        
+</div>

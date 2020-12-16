@@ -1,0 +1,46 @@
+<script type="text/javascript">
+
+	window.onload = function () {
+
+      var dps = [];   //dataPoints. 
+                var elemento=[];
+                {{#each consumos}}
+                    var idajena = "{{descripcion}}";
+                    var WattsAjeno = {{Wh}};
+                    elemento={y:WattsAjeno, label:idajena };
+                    dps.push(elemento);
+                {{/each}}
+     console.log(dps);
+      var chart = new CanvasJS.Chart("chartContainer",{
+      	title :{
+      		text: "Consumos Acumulados x Dispositivo"
+      	},
+      	axisX: {						
+      		title: "Dispositivos"
+      	},
+      	axisY: {						
+      		title: "Watts por hora"
+      	},
+      	data: [{
+      		type: "bar",
+      		dataPoints : dps
+      	}]
+      });
+
+      chart.render();
+
+        };
+
+</script>
+</head>
+<body>
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+             <thead>
+                <tr>
+                <th scope="row"></th> 
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</tr>
+</thead>
+</table></div>
